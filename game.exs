@@ -2,7 +2,7 @@ defmodule Game do
 
   def join_game({:user, name, age, role}) do
     result = if age >= 18, do: true, else: false
-    return result
+    IO.puts(result)
     # result = age >= 18 && true || false 
   end
 
@@ -19,3 +19,5 @@ defmodule Game do
   end
 
 end
+
+Game.join_game({:user, 'User', 12, 'user'})
