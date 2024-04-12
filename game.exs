@@ -8,13 +8,13 @@ defmodule Game do
     # result = age >= 18 && true || false 
   end
 
-  def move_allowed(current_color, {:figure, type, color}) do
+  def move_allowed?(current_color, {type, color}) do
     is_color = if current_color == color, do: true, else: false 
     result = if ( type == :pawn && is_color ) || ( type == :rock && is_color ), do: true, else: false
     IO.puts(result)
   end
 
-  def single_win(a_win, b_win) do
+  def single_win?(a_win, b_win) do
     result = if a_win == b_win, do: false, else: true 
     IO.puts(result)
   end
@@ -36,7 +36,7 @@ defmodule Game do
 
 end
 
-Game.join_game({ :user, 'User', 12, :admin })
-Game.move_allowed(:white , { :figure, :pawn, :black })
-Game.single_win( true, true )
-Game.double_win?( true, false, true )
+#Game.join_game({ :user, 'User', 12, :admin } )
+#Game.move_allowed?( :white , { :figure, :pawn, :black } )
+#Game.single_win?( true, true )
+#Game.double_win?( true, false, true )
